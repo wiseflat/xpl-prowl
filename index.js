@@ -14,7 +14,7 @@ wt._init(function(error, xpl) {
         
         xpl.on("xpl:prowl.basic", function(message) {
 		console.log("Receive message ", message);
-                wt._push(message, 'wiseflat');
+                wt._push(message);
         });        
 });
 
