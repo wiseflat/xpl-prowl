@@ -12,9 +12,14 @@ wt._init(function(error, xpl) {
 		return;
 	}
         
-        xpl.on("xpl:prowl.basic", function(message) {
-		console.log("Receive message ", message);
-                wt._push(message);
-        });        
+        xpl.on("xpl:prowl.basic", function(evt) {
+		console.log("Receive message ", evt);
+                wt._push(evt);
+        }); 
+        
+        xpl.on("xpl:prowl.config", function(evt) {
+		console.log("Receive message ", evt);
+                wt._config(evt);
+        }); 
 });
 

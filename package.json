@@ -5,7 +5,8 @@
   "main": "./lib/xpl-prowl.js",
   "dependencies": {
     "xpl-api": "~1.0.12",
-    "node-prowl": "~0.1.7"
+    "node-prowl": "~0.1.7",
+    "fs": "~0.0.2"
   },
   "keywords": [
     "XPL","nodejs","prowl"
