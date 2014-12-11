@@ -6,8 +6,7 @@
   "dependencies": {
     "xpl-api": "~1.0.12",
     "node-prowl": "~0.1.7",
-    "fs": "~0.0.2",
-    "util": "~0.10.3"
+    "fs": "~0.0.2"
   },
   "keywords": [
     "XPL","nodejs","prowl"
