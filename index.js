@@ -23,7 +23,7 @@ wt._init(function(error, xpl) {
 
         xpl.on("xpl:prowl.request", function(evt) {
 		console.log("Receive message ", evt);
-                wt._get_config();
+                wt.readConfig();
         });
 });
 
