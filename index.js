@@ -21,9 +21,9 @@ wt._init(function(error, xpl) {
                 if(evt.headerName == 'xpl-cmnd' && wt._schema_prowl_config(evt.body)) wt._set_config(evt.body);
         }); 
 
-        /*xpl.on("xpl:prowl.request", function(evt) {
+        xpl.on("xpl:prowl.request", function(evt) {
 		console.log("Receive message ", evt);
                 wt._get_config();
-        }); */
+        });
 });
 
