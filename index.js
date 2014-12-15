@@ -13,17 +13,17 @@ wt._init(function(error, xpl) {
         
         xpl.on("xpl:prowl.basic", function(evt) {
 		console.log("Receive message ", evt);
-                if(evt.headerName == 'xpl-cmnd' && wt._schema_prowl_basic(evt.body)) wt._push(evt.body);
+                if(evt.headerName == 'xpl-cmnd' && wt.validBasicSchema(evt.body)) wt.push(evt.body);
         }); 
         
         xpl.on("xpl:prowl.config", function(evt) {
 		console.log("Receive message ", evt);
-                if(evt.headerName == 'xpl-cmnd' && wt._schema_prowl_config(evt.body)) wt._set_config(evt.body);
+                if(evt.headerName == 'xpl-cmnd' && wt.validConfigSchema(evt.body)) wt.writeConfig(evt.body);
         }); 
 
         xpl.on("xpl:prowl.request", function(evt) {
 		console.log("Receive message ", evt);
-                wt.readConfig();
+                if(evt.headerName == 'xpl-cmnd') wt.readConfig();
         });
 });
 
