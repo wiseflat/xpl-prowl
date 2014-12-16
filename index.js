@@ -1,7 +1,7 @@
 var xplprowl = require("./lib/xpl-prowl");
 
 var wt = new xplprowl(null, {
-	xplSource: 'bnz-prowl.wiseflat'
+	//xplSource: 'bnz-prowl.wiseflat'
 });
 
 wt._init(function(error, xpl) {
