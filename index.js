@@ -30,14 +30,10 @@ wt.init(function(error, xpl) {
         });
         
         xpl.on("xpl:prowl.basic", function(evt) {
-		console.log("Receive message ", evt);
-                //if(evt.headerName == 'xpl-cmnd' && wt.validBasicSchema(evt.body)) wt.push(evt.body);
 		if(evt.headerName == 'xpl-cmnd') wt.push(evt.body);
         }); 
         
         xpl.on("xpl:prowl.config", function(evt) {
-		console.log("Receive message ", evt);
-                //if(evt.headerName == 'xpl-cmnd' && wt.validConfigSchema(evt.body)) wt.writeConfig(evt.body);
 		if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt.body);
         });
 });
