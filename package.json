@@ -4,7 +4,7 @@
   "description": "Node JS layer for XPL and prowl API",
   "main": "./lib/xpl-prowl.js",
   "dependencies": {
-    "xpl-api": "~1.0.12",
+    "xpl-api": "Nodejs-XPL/xpl-api",
     "node-prowl": "~0.1.7",
     "fs": "~0.0.2"
   },
