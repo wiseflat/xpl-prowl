@@ -24,17 +24,13 @@ wt.init(function(error, xpl) {
         setInterval(function(){
                 wt.sendConfig();
         }, 60 * 1000);
-        
-        xpl.on("xpl:prowl.request", function(evt) {
-                if(evt.headerName == 'xpl-cmnd') wt.sendConfig();
-        });
-        
+                
         xpl.on("xpl:prowl.basic", function(evt) {
-		if(evt.headerName == 'xpl-cmnd') wt.push(evt.body);
+		if(wt.configHash.enable && evt.headerName == 'xpl-cmnd') wt.push(evt);
         }); 
         
         xpl.on("xpl:prowl.config", function(evt) {
-		if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt.body);
+		if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt);
         });
 });
 
