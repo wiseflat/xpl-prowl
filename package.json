@@ -1,6 +1,6 @@
 {
   "name": "xpl-prowl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node JS layer for XPL and prowl API",
   "main": "./lib/xpl-prowl.js",
   "dependencies": {
